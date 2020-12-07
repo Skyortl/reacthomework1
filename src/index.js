@@ -2,16 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import User from './UserComponent/User';
+import Task from './TaskComponent/Task';
+import City from './CityComponent/City';
 
+//JSX
 ReactDOM.render(
   <React.StrictMode>
+    <Task taskNumber = '1'/>
     <App />
+    <Task taskNumber = '2'/>
+    <User />
+    <Task taskNumber = '3'/>
+    <City/>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//NO JSX
+// const helloElement = React.createElement('h1', {'className': 'App'},'Hello React!!');
+// ReactDOM.render(
+//   helloElement,
+//   document.getElementById('root')
+// );
